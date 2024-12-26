@@ -1,0 +1,7 @@
+web:
+  authentication:
+    api_keys:
+      my_api_key:
+        key: random16orMoreCharacterAPIKey
+        role: readonly # readonly, readwrite, administrator
+        
