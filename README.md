@@ -3,7 +3,7 @@ Instructions for installing Soularr on Unraid. Please read through this fully be
 
 ### Step 1
 
-Make sure you go through the setup steps at https://soularr.net/ to make sure Lidarr and slskd are working. You will have to manually adjust your slskd.yml to add an API key for Soularr to use. 
+Make sure you go through the setup steps at https://soularr.net/ to make sure Lidarr and slskd are working. You will have to manually adjust your slskd.yml to add an API key for Soularr to use. You can see sample [here](https://github.com/JPDVM2014/soularr/blob/main/sample_smskd.yml).
 
 #### Note for slskd:
 
