@@ -5,7 +5,7 @@ Instructions for installing Soularr on Unraid. Please read through this fully be
 
 Make sure you go through the setup steps at https://soularr.net/ to make sure Lidarr and slskd are working. You will have to manually adjust your slskd.yml to add an API key for Soularr to use. You can see sample [here](https://github.com/JPDVM2014/soularr/blob/main/sample_smskd.yml).
 
-### Note for Lidarr:
+#### Note for Lidarr:
 
 If you use Trash's guides for media, and your lidarr root path starts with /data, you will need to add an extra volume mount to your lidarr template directly to your slskd downloads. For example, "/mnt/user/data/media/slskd/downloads : /slskd". Then in your Soularr config, your Lidarr directory should be set as ”/slskd".
 
