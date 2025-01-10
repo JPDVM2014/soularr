@@ -5,6 +5,10 @@ Instructions for installing Soularr on Unraid. Please read through this fully be
 
 Make sure you go through the setup steps at https://soularr.net/ to make sure Lidarr and slskd are working. You will have to manually adjust your slskd.yml to add an API key for Soularr to use. You can see sample [here](https://github.com/JPDVM2014/soularr/blob/main/sample_smskd.yml).
 
+### Note for Lidarr:
+
+If you use Trash's guides for media, and your lidarr root path starts with /data, you will need to add an extra volume mount to your lidarr template directly to your slskd downloads. For example, "/mnt/user/data/media/slskd/downloads : /slskd". Then in your Soularr config, your Lidarr directory should be set as ”/slskd".
+
 #### Note for slskd:
 
 If you installed slskd using the Unraid CA template, it will most likely be running as root. To make sure soularr will work, you need to adjust your slskd template.
@@ -35,7 +39,7 @@ Once the config is downloaded, you need to edit the values.
 
 The main things to change are your Lidarr and slskd API keys and make sure the host_url for both entries are correct. 
 
-You will also need to adjust the download_dir for Lidarr and slskd. Lidarr should be the slskd downloar directory the way it looks from within Lidarr, not the Unraid share directory. For example, my slskd Unraid share is "mnt/user/data/music", but in Lidarr that directory is mounted at "/data/music". So, in the Soularr config, I set Lidarr's download_dir to /data/music.
+You will also need to adjust the download_dir for Lidarr and slskd. Lidarr should be the slskd download directory the way it looks from within Lidarr, not the Unraid share directory. For example, my slskd Unraid share is "mnt/user/data/media/slskd/downloads", but in Lidarr that directory is mounted at "/slskd". So, in the Soularr config, I set Lidarr's download_dir to /slskd.
 
 If you are going to use the Unraid template as-is, you can set slskd's download_dir to /downloads. Then ctrl + o then enter to save. Ctrl + x to exit nano.
 
